@@ -1,5 +1,5 @@
 //Filename colorPicker.js, written by David Carrie, Last Updated June 14 2023.
-//Contains code for color picker, changes menu or background color based on button clicked
+//Contains code for color picker, changes menu or background color based on button clicked.
 
 //Initial code was taken from https://jqueryui.com/slider/#colorpicker and modified for my use.
 

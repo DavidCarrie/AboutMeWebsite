@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Carrie">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Weather Map</title>
+</head>
+
+
+
+<body>
+    <header>
+        <!-- Top Nav -->
+        <nav class="navbar">
+            <div>
+                <h1>Weather API</h1>
+            </div>
+            <ul class="mainNav">
+                <li><a href="professional.html">Professional and Education Information</a></li>
+                <li><a href="projectlist.html">Project List and Descriptions</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Div to hold weather data -->
+    <div id="weather"></div>
+
+    <!-- Controls for getting weather -->
+    <button class="button" onclick="callCurrentWeather()" id="currentWeather">Current Weather</button>
+    <button class="button" onclick="call3Day()" id="3DayForcast">3 Day Forecast</button>
+    <button class="button" onclick="callHourly()" id="Hourly">Hourly Forecast</button>
+
+    <p>Your estimated coorindates (or coordinates for Boston if unavailable).</p>
+
+    <!-- Display coordinates -->
+    <div id="demo"></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/weather.js"></script>
+    <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
+    <footer>
+        <p> Author: David Carrie. Last Modified: July 11 2023</p>
+    </footer>
+
+</body>
+
+
+
+</html>

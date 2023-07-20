@@ -1,3 +1,6 @@
+/*File colorPicker.css, Taken from https://jqueryui.com/slider/#colorpicker */
+/* This code is not mine, used for unit 6 using libraries, Last modified July 12 2023 */
+
 #red, #green, #blue {
     float: left;
     clear: left;

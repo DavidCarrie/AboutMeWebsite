@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="description" content="Personal Website">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name="author" content="David Carrie">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Exercises</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="css/colorPicker.css" />
+</head>
+
+
+
+<body>
+  <header>
+    <!-- Top Nav -->
+    <nav class="navbar">
+      <div>
+        <h1>Exercises</h1>
+      </div>
+      <ul class="mainNav">
+        <li><a href="professional.html">Professional and Education Information</a></li>
+        <li><a href="projectlist.html">Project List and Descriptions</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <h2>Enter information to search for an exercise, all entries are optional</h2>
+  <div>Search by name:<br><input type="text" id="ename" placeholder="Enter full or partial name" /></div>
+  <label for="etype">Exercise Type:</label>
+  <select id="etype" name="country" class="form-control">
+    <option value="">None</option>
+    <option value="cardio">Cardio</option>
+    <option value="olympic_weightlifting">Olympic Weightlifting</option>
+    <option value="plyometrics">Plyometrics</option>
+    <option value="powerlifting">Powerlifting</option>
+    <option value="strength">Strength</option>
+    <option value="stretching">Stretching</option>
+    <option value="strongman">Strongman</option>
+  </select>
+  <label for="muscle">Muscle Group:</label>
+  <select id="muscle" name="country" class="form-control">
+    <option value="">None</option>
+    <option value="abdominals">Abdominals</option>
+    <option value="abductors">Abductors</option>
+    <option value="adductors">Adductors</option>
+    <option value="biceps">Biceps</option>
+    <option value="calves">calves</option>
+    <option value="chest">Chest</option>
+    <option value="forearms">Forearms</option>
+    <option value="glutes">Glutes</option>
+    <option value="hamstrings">Hamstring</option>
+    <option value="lats">Lates</option>
+    <option value="lower_back">Lower Back</option>
+    <option value="middle_back">Middle Back</option>
+    <option value="neck">Neck</option>
+    <option value="quadriceps">Quadriceps</option>
+    <option value="traps">Traps</option>
+    <option value="triceps">Triceps</option>
+  </select>
+  <label for="difficulty">Level of Difficulty</label>
+  <select id="difficulty" name="country" class="form-control">
+    <option value="">None</option>
+    <option value="begginer">Begginer</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="expert">Expert</option>
+  </select>
+  <input class="button" value="Search for Exercise" onclick="exerciseSearch()" />
+  <div id="exerciseTable"></div>
+  <p id="error"></p>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/findExercise.js"></script>
+  <p> Author: David Carrie. Last Modified: July 12 2023</p>
+</body>
+
+
+
+</html>

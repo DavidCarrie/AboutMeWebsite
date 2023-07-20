@@ -1,11 +1,11 @@
 //Filename submitData.js, written by David Carrie, Last Updated Feb. 22 2023.
 //Reads data from a input fields and writes to a file.
 
-//Function called when user clicks submit Data
+
+//Function called when user clicks submit Data and it passes validation
 function submitData() {
     const userData = new feedBack();
 }
-
 
 //Class feedBack: gets and processes user submit data
 class feedBack {
@@ -17,15 +17,17 @@ class feedBack {
     #userCountry;
     #userComments;
 
-    //Creates instance of class
+    //Creates instance of class 
     constructor() {
 
         this.#getData();
+        this.#outputData();
+        /* Old validation code no longer required. Uses jQeury validate instead
         if (this.#validateData()) {
             this.#outputData();
         } else {
             this.#dataError();
-        }
+        }*/
 
     }
 
@@ -58,9 +60,10 @@ class feedBack {
         this.#data.set("Comments", document.getElementById("comments").value);*/
     }
 
-    //Currently just validates age
+   
+    /* The validate and error function have been replaced with jQuery plugin validation
+    //Currently just validates age 
     #validateData() {
-        console.log(this.#userAge.value)
         if (typeof this.#userAge.value != "string") {
             return false;
         }  // we only process strings!  
@@ -70,7 +73,7 @@ class feedBack {
     //Notifies user of invalid data
     #dataError() {
         alert("You have entered invalid data")
-    }
+    }*/
 
     //Method to send data to storage - currently a local file. Potentially change to live data source.
     #outputData() {
@@ -94,3 +97,28 @@ class feedBack {
         link.click();
     }
 }
+
+//On document load call validate plugin
+$().ready(function () {
+    $("#commentForm").validate({
+        rules: {
+            fullName: {
+                required: true,
+                minlength: 3
+            },
+            age: {
+                digits: true
+            },
+            email: {
+                required: true,
+                email: true
+            }
+
+        },
+        //if validatin succesful submit form
+        submitHandler: function (form) {
+            //console.log("In submit handler")
+            submitData()
+        }
+    })
+})

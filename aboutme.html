@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Carrie">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>About Me</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- Top Nav -->
+        <nav class="navbar">
+            <div>
+                <h1>About Me</h1>
+            </div>
+            <ul class="mainNav">
+                <li><a href="professional.html">Professional and Education Information</a></li>
+                <li><a href="projectlist.html">Project List and Descriptions</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="images/electronic-banner.jpg" alt="Circuit banner" style="width:100%;height:200px;">
+
+    <div class="linkedIn">
+        <p><a href="https://www.linkedin.com/in/davidcarrie/">LinkedIn</a></p>
+
+    </div>
+    <img src="images/Me.jpg" alt="Picture of me, David Carrie" class="floatright">
+    <h3>
+        My Hobbies
+    </h3>
+    <ul>
+        <li>Gardening and Landscaping</li>
+        <li>General Handiwork</li>
+        <li><a href="healthfitness.html">Health and Fitness</a></li>
+        <li>Video Games</li>
+        <li>Creating embedded systems</li>
+    </ul>
+    <h3>Interests</h3>
+
+    <ul>
+        <li>Environment Sustainability and Renewable Energy</li>
+        <li>Health and Fitness</li>
+        <li>Electronic and Software System Design</li>
+    </ul>
+    <h3>Five random hobbies I might want to take up</h3>
+
+    <ul id="hobbyList"></ul>
+
+
+
+
+
+    <div class="newsletterSignup">
+        <h2>Sign up for our<span> newsletter.</span></h2>
+        <p>Email validation on Send</p>
+        <form name="form" action="mailto:david.carrie@gmail.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            <input type="submit" name="submit" value="Send" onclick="ValidateEmail(document.form.mail)">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <!-- Code taken from https://www.w3resource.com/javascript/form/email-validation.php, written by w3resouce. Taken on Feb 6 2023 for email validation in unit 4, -->
+
+
+    <p>Code for email validation taken and modified from https://www.w3resource.com/javascript/form/email-validation.php
+        written by w3resouce.</p>
+    <p> Author: David Carrie. Last Modified: July 12 2023</p>
+    <script src="js/validateEmail.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/hobbiesAPI.js"></script>
+</body>
+
+</html>

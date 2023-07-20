@@ -1,7 +1,9 @@
+/*File main.css, Writen by David Carrie, Last modified July 12 2023 */
+/* Contains most of the CSS required for my personal website */
 /*General document styling */
 
 .play,
-.stop{
+.stop {
   width: fit-content !important;
 }
 
@@ -66,7 +68,7 @@ a:hover {
   position: relative;
 }
 
-.linkedIn>*>a::before {
+.linkedIn>p>a::before {
   content: '';
   background-color: cyan;
   position: absolute;
@@ -78,25 +80,40 @@ a:hover {
   transition: all .2s ease-in-out;
 }
 
-.linkedIn>*>a:hover::before {
+.linkedIn>p>a:hover::before {
   bottom: 0;
   height: 100%;
 }
 
 /*Table Specific Styling*/
 table {
-  border: 1px solid;
+  border: 0.1em solid;
   width: 70%
 }
 
+
+
+
+#exerciseTable>table {
+  width: 75%;
+}
+
+#exerciseTable>table>tr>td {
+  text-shadow:
+    -0.025em 0em black,
+    0.025em 0em black,
+    0em -0.025em black,
+    0em 0.025em black;
+}
+
 th {
-  border: 1px solid;
+  border: 0.1em solid;
   text-align: center;
   background-color: #bbb;
 }
 
 td {
-  border: 1px solid;
+  border: 0.1em solid;
 }
 
 /* taken from https://www.w3.org/Style/Examples/007/evenodd */
@@ -111,6 +128,8 @@ tr:nth-child(odd) {
 tr:not(:first-child):hover {
   background-color: grey;
 }
+
+
 
 /*End of General document styling */
 /* Top navigation bar styling */
@@ -174,8 +193,9 @@ tr:not(:first-child):hover {
 /*End of Top navigation bar styling */
 
 
-/*Form input styling taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim and modified for my use*/
-/*input[type=text] {
+
+input,
+textarea {
   display: block;
   width: 31vw;
   box-sizing: border-box;
@@ -185,32 +205,15 @@ tr:not(:first-child):hover {
   background-color: white;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
-  margin: auto;
+
 }
 
 
-*/
-
-input,
-textarea{
-    display: block;
-    width: 31vw;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    padding: 12px 20px 12px 40px;
-    transition: width 0.4s ease-in-out;
-    
-}
-
-
-input:focus,
+input[type=text]:focus,
 textarea:focus {
-    width: 50vw;
-    background-color:
-        lightyellow;
+  width: 50vw;
+  background-color:
+    lightyellow;
 }
 
 
@@ -228,7 +231,7 @@ input[type=reset] {
   align-items: center;
 }
 
-#comments{
+#comments {
   max-width: 100%;
   max-height: 20%
 }
@@ -241,19 +244,24 @@ img {
   margin-left: auto;
 }
 
+.floatright {
+  margin-right: 10%;
+  float: right
+}
+
 .mySlides {
   width: 100%;
   object-fit: fill;
 }
 
-#form-flex{
+#form-flex {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-fieldset > p{
+fieldset>p {
   color: grey;
   font-size: 0.8em;
 }
@@ -372,10 +380,10 @@ canvas {
 }
 
 /*Code for button*/
- /*position:absolute;
+/*position:absolute;
     left: 550px;
     margin-top: 25px;*/
-    
+
 button {
   background: blue;
   color: white;
@@ -396,6 +404,7 @@ button {
   margin: auto;
   width: 50%;
   /*border: 3px solid blue;*/
+  display: block;
   padding: 10px;
   text-align: center;
 }
@@ -420,7 +429,8 @@ input {
 input.error {
   border: 1px solid red
 }
-input[type=submit]{
+
+input[type=submit] {
   text-align: center;
 }
 
@@ -445,4 +455,29 @@ label.valid {
   margin: auto;
   width: 30vw;
   text-align: center;
+}
+
+.weatherTable {
+  margin: auto;
+  width: auto;
+  text-align: center;
+}
+
+.weatherTable>*>tr>* {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.weatherHourly *>tr>th {
+  width: 30em;
+}
+
+#counter {
+  background-color: green;
+  color: white;
+}
+
+/*for leaflet.js map */
+#map {
+  height: 50em;
 }

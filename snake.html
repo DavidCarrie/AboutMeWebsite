@@ -2,30 +2,34 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="css\main.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Personal Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="David Carrie">
+  <link rel="stylesheet" href="css/main.css">
   <title>Snake Game</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link type="text/css" rel="stylesheet" href="css/colorPicker.css" />
-
-
 </head>
 
-<header>
-  <!-- Top Nav -->
-  <nav class="navbar">
-    <div>
-      <h1>Snake Game</h1>
-    </div>
-    <ul class="mainNav">
-      <li><a href="professional.html">Professional and Education Information</a></li>
-      <li><a href="projectlist.html">Project List and Descriptions</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </nav>
-</header>
+
 
 <body>
+  <header>
+    <!-- Top Nav -->
+    <nav class="navbar">
+      <div>
+        <h1>Snake Game</h1>
+      </div>
+      <ul class="mainNav">
+        <li><a href="professional.html">Professional and Education Information</a></li>
+        <li><a href="projectlist.html">Project List and Descriptions</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+    <img src="images/electronic-banner.jpg" alt="Circuit banner" style="width:100%;height:200px;">
+  
+  </header>
   <canvas id="myCanvas" width="420" height="420"></canvas>
   <section id="snakeControls">
 
@@ -37,51 +41,22 @@
     </p>
   </div>
 
-    <div class=star>
-      <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-1"></i>
-      <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-2"></i>
-      <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-3"></i>
-      <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-4"></i>
-      <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-5"></i>
-    </div>
+  <div class=star>
+    <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-1"></i>
+    <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-2"></i>
+    <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-3"></i>
+    <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-4"></i>
+    <i class="fa fa-star fa-5x" class="p1" aria-hidden="true" id="p1-5"></i>
+  </div>
 
+
+  <footer>
     <script src="js/jquery.js"></script>
     <script src="js/snake.js"></script>
-    <script>
-      //Code inspired from https://www.javatpoint.com/oprweb/test.jsp?filename=jquery-star-rating1 taken on June 10th 2023
-      $(document).ready(function () {
+    <p> Author: David Carrie. Last Modified: July 11 2023</p>
+  </footer>
 
-        $("#p1-1").click(function () {
-          $(".fa-star").css("color", "black");
-          $("#p1-1").css("color", "yellow");
-
-        });
-        $("#p1-2").click(function () {
-          $(".fa-star").css("color", "black");
-          $("#p1-1, #p1-2").css("color", "yellow");
-
-        });
-        $("#p1-3").click(function () {
-          $(".fa-star").css("color", "black")
-          $("#p1-1, #p1-2, #p1-3").css("color", "yellow");
-
-        });
-        $("#p1-4").click(function () {
-          $(".fa-star").css("color", "black");
-          $("#p1-1, #p1-2, #p1-3, #p1-4").css("color", "yellow");
-
-        });
-        $("#p1-5").click(function () {
-          $(".fa-star").css("color", "black");
-          $("#p1-1, #p1-2, #p1-3, #p1-4, #p1-5").css("color", "yellow");
-
-        });
-
-        
-      });
-    </script>
-
-<p> Author: David Carrie. Last Modified: June 17 2023</p>
 </body>
+
 
 </html>

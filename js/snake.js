@@ -353,3 +353,36 @@ function draw() {
     } 
     gameBoard.drawScore(ctx, cHeight);
 }
+
+//Code for star rating system
+//Code inspired from https://www.javatpoint.com/oprweb/test.jsp?filename=jquery-star-rating1 taken on June 10th 2023
+$(document).ready(function () {
+
+    $("#p1-1").click(function () {
+      $(".fa-star").css("color", "black");
+      $("#p1-1").css("color", "yellow");
+
+    });
+    $("#p1-2").click(function () {
+      $(".fa-star").css("color", "black");
+      $("#p1-1, #p1-2").css("color", "yellow");
+
+    });
+    $("#p1-3").click(function () {
+      $(".fa-star").css("color", "black")
+      $("#p1-1, #p1-2, #p1-3").css("color", "yellow");
+
+    });
+    $("#p1-4").click(function () {
+      $(".fa-star").css("color", "black");
+      $("#p1-1, #p1-2, #p1-3, #p1-4").css("color", "yellow");
+
+    });
+    $("#p1-5").click(function () {
+      $(".fa-star").css("color", "black");
+      $("#p1-1, #p1-2, #p1-3, #p1-4, #p1-5").css("color", "yellow");
+
+    });
+
+
+  });

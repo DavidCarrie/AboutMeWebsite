@@ -15,7 +15,6 @@
 
 <body>
 
-
   <!-- Top Nav -->
   <nav class="navbar">
     <div>
@@ -41,57 +40,70 @@
       <td><a href="snake.html">Snake Game</a></td>
       <td>Javascript development</td>
       <td>Game where the user controls a snake and is tasked with eating food without crashing.</td>
-      <td class="star"><i class="fa fa-star p1" aria-hidden="true" id="p1-1"></i>
-        <i class="fa fa-star p1" aria-hidden="true" id="p1-2"></i>
-        <i class="fa fa-star p1" aria-hidden="true" id="p1-3"></i>
-        <i class="fa fa-star p1" aria-hidden="true" id="p1-4"></i>
-        <i class="fa fa-star p1" aria-hidden="true" id="p1-5"></i>
+      <td>
+        <div class="rw-ui-container" data-title="snake-rating"></div>
       </td>
     </tr>
     <tr>
       <td><a href="graph.html">Graph</a></td>
       <td>Javascript development</td>
       <td>Page showing a bar graph, changing which data is displayed based on user input.</td>
-      <td class="star"><i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-1"></i>
-        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-2"></i>
-        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-3"></i>
-        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-4"></i>
-        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-5"></i>
+      <td>
+        <div class="rw-ui-container" data-title="graph-rating"></div>
       </td>
     </tr>
     <tr>
-      <td><a href="submitData.html">User Demographic Submission</a></td>
+      <td><a href="submitData.html">User Demographic and Feedback Submission</a></td>
       <td>Javascript development</td>
       <td>Form which allows user to submit data to be used for site demographics (currently just downloads data
         locally).</td>
-      <td class="star"><i class="fa fa-star p3" aria-hidden="true" id="p3-1"></i>
-        <i class="fa fa-star p3" aria-hidden="true" id="p3-2"></i>
-        <i class="fa fa-star p3" aria-hidden="true" id="p3-3"></i>
-        <i class="fa fa-star p3" aria-hidden="true" id="p3-4"></i>
-        <i class="fa fa-star p3" aria-hidden="true" id="p3-5"></i>
+      <td>
+        <div class="rw-ui-container" data-title="submitData-rating"></div>
       </td>
     </tr>
     <tr>
       <td><a href="graph.html">Style Switcher</a></td>
       <td>Javascript development</td>
       <td>Allows the user to change the css style of the page using a link.</td>
-      <td class="star"><i class="fa fa-star p4" aria-hidden="true" id="p4-1"></i>
-        <i class="fa fa-star p4" aria-hidden="true" id="p4-2"></i>
-        <i class="fa fa-star p4" aria-hidden="true" id="p4-3"></i>
-        <i class="fa fa-star p4" aria-hidden="true" id="p4-4"></i>
-        <i class="fa fa-star p4" aria-hidden="true" id="p4-5"></i>
+      <td>
+        <div class="rw-ui-container" data-title="style-rating"></div>
       </td>
     </tr>
-    <td><a href="colorPicker.html">Color Picker</a></td>
-    <td>Javascript development</td>
-    <td>Allows the user to change the background color or navigation menu color using sliders and the buttons provided.
-    </td>
-    <td class="star"><i class="fa fa-star p5" aria-hidden="true" id="p5-1"></i>
-      <i class="fa fa-star p5" aria-hidden="true" id="p5-2"></i>
-      <i class="fa fa-star p5" aria-hidden="true" id="p5-3"></i>
-      <i class="fa fa-star p5" aria-hidden="true" id="p5-4"></i>
-      <i class="fa fa-star p5" aria-hidden="true" id="p5-5"></i>
-    </td>
+    <tr>
+      <td><a href="colorPicker.html">Color Picker</a></td>
+      <td>Javascript development</td>
+      <td>Allows the user to change the background color or navigation menu color using sliders and the buttons
+        provided.
+      </td>
+      <td>
+        <div class="rw-ui-container" data-title="colorPicker-rating"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="weather.html">Weather</a></td>
+      <td>API and Javascript development</td>
+      <td>Allows the user to view weather information.</td>
+      <td>
+        <div class="rw-ui-container" data-title="weather-rating"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="exercises.html">Find Exercises</a></td>
+      <td>API and Javascript development</td>
+      <td>Search for physical excercises based on Name, Type, Muscle Group, or difficulty
+      </td>
+      <td>
+        <div class="rw-ui-container" data-title="healthfitness-rating"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="mapofusers.html">Map of Users</a></td>
+      <td>API and Javascript development</td>
+      <td>Shows an interactive map with markers of Users
+      </td>
+      <td>
+        <div class="rw-ui-container" data-title="linkedIn-rating"></div>
+      </td>
     </tr>
   </table>
   <p></p>
@@ -105,82 +117,16 @@
   </div>
   <button class="button play">Start Slide Auto Scroll</button>
   <button class="button stop">Stop Slide Auto Scroll</button>
-  <p> Author: David Carrie. Last Modified: June 12 2023</p>
-  <script src="js/jquery.js"></script>
-  <!-- Reference to javascript file for carousel taken from: taken from https://www.javascriptfreecode.com/Carousel_Slider.htm on Feb 2 2023, written by @phuang */ -->
-  <script>
 
-    $(document).ready(function () {
-      //Call owl carousel for new carousel
-
-      var owl = $('.owl-carousel');
-      owl.owlCarousel({
-        nav: true,
-        navigationText: ["Next", "Prev"],
-        dots: false,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        autoHeight: true,
-        items: 1
-      });
-
-      $("body > button:nth-child(8)").click(function () {
-        console.log("start button clicked.")
-        owl.trigger('play.owl.autoplay', [2000])
-      });
-      $("body > button:nth-child(9)").click(function () {
-        console.log("stop button clicked.")
-        owl.trigger('stop.owl.autoplay')
-      });
-
-      //create array to iterate over to generate click functions
-      var projects = new Array()
-      for (i = 0; i < 5; i++) {
-        projects[i] = i + 1;
-      }
-
-      //Loop to create on click functions for star ratings
-      $.each(projects, function (i, v) {
-        var starClass = ".p" + v;
-        var starIdPref = "#p" + v;
-
-        $(starIdPref + "-1").click(function () {
-          $(starClass).css("color", "black");
-          $(starIdPref + "-1").css("color", "yellow");
-        });
-
-        $(starIdPref + "-2").click(function () {
-          $(starClass).css("color", "black");
-          $(starIdPref + "-1" + ", " + starIdPref + "-2").css("color", "yellow");
-        });
-
-        $(starIdPref + "-3").click(function () {
-          $(starClass).css("color", "black")
-          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3").css("color", "yellow");
-        });
-
-        $(starIdPref + "-4").click(function () {
-          $(starClass).css("color", "black");
-          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3" + ", " + starIdPref + "-4").css("color", "yellow");
-        });
-
-        $(starIdPref + "-5").click(function () {
-          $(starClass).css("color", "black");
-          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3" + ", " + starIdPref + "-4" + ", " + starIdPref + "-5").css("color", "yellow");
-
-
-        });
-      });
-
-    });
-
-  </script>
+  <footer>
+    <p> Author: David Carrie. Last Modified: July 11 2023</p>
+    <script src="js/jquery.js"></script>
+    <script src="js/projectListCarousel.js"></script>
+    <script src="js/rating-widget.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+  </footer>
 
 </body>
-<footer>
-  <script src="js/owl.carousel.min.js"></script>
-</footer>
+
 
 </html>
