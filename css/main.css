@@ -1,0 +1,188 @@
+/*General document styling */
+
+/*include padding and border in total size*/
+html {
+  box-sizing: border-box;
+}
+
+/*Set Background lightblue*/
+body {
+  background-color: lightblue;
+}
+
+/*Set headers with shadows, alignment and color*/
+h3 {
+  text-shadow:
+    -1px 0px black,
+    1px 0px black,
+    0px -1px black,
+    0px 1px black;
+  color: white;
+  text-align: left;
+}
+
+h2 {
+  text-shadow:
+    -1px 0px black,
+    1px 0px black,
+    0px -1px black,
+    0px 1px black;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+h1 {
+  text-shadow:
+    -1px 0px  black,
+    1px 0px black,
+    0px -1px  black,
+    0px 1px black;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+/*paragraph styling*/
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+body > div.linkedIn > p > a
+/*links on hover*/
+a:hover {
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+/*Linkedin Link Specific, inspired from https://codepen.io/team/css-tricks/pen/xxPORam by Freee Frontend*/
+.linkedIn > * > a{
+	text-decoration: none;
+	color: darkblue;
+	font-weight: 700;
+  position: relative;
+}
+
+.linkedIn > * > a::before{
+  content: '';
+  background-color: cyan;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  transition: all .2s ease-in-out;
+}
+.linkedIn > * > a:hover::before{
+  bottom: 0;
+  height: 100%;
+}
+/*Table Specific Styling*/
+table {
+  border: 1px solid;
+  width: 50%
+}
+
+th {
+  border: 1px solid;
+  text-align: center;
+  background-color:#bbb;
+}
+
+td {
+  border: 1px solid;
+}
+/* taken from https://www.w3.org/Style/Examples/007/evenodd */
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
+tr:not(:first-child):hover {
+  background-color: grey;
+}
+
+/*End of General document styling */
+/* Top navigation bar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar > h1 {
+  font-size: 3vh;
+  padding-left: 3vw;
+}
+
+.navbar > div {
+  flex-grow: 1;
+}
+
+.navbar * > h1 {
+  font-size: 3vh;
+  padding-left: 3vw;
+  align-items: center;
+  justify-content: center; 
+  text-align:center;
+}
+
+.mainNav {
+  padding: 0;
+  list-style-type: none;
+}
+
+.mainNav li {
+  float: right;
+  border-right: 1vh solid #bbb;
+  border-left: 1vh solid #bbb;
+  background-color: grey;
+}
+
+.mainNav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 3vh 3vw;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.mainNav li:first-child {
+  border-right: none;
+}
+
+.mainNav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.mainNav .active {
+  background-color: #2e04aa;
+}
+/*End of Top navigation bar styling */
+
+
+/*Form input styling taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim and modified for my use*/
+input[type=text]{
+  width: 31vw;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus{
+  width:50vw;
+}
+/*Form Button styling*/
+/*Taken from https://www.w3schools.com/css/css_form.asp and modified for my use */
+input[type=submit],
+input[type=reset] {
+  background-color: #2304aa;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  width:15vw;
+  margin: 4px 2px;
+  cursor: pointer;
+}
