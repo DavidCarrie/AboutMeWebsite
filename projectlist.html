@@ -12,6 +12,8 @@
 
 <body>
 
+
+  <!-- Top Nav -->
   <nav class="navbar">
     <div>
       <h1>Project List</h1>
@@ -22,7 +24,6 @@
       <li><a href="index.html">Home</a></li>
     </ul>
   </nav>
-
   <img src="images/electronic-banner.jpg" alt="Circuit banner" style="width:100%;height:200px;">
 
   <h1>Project List</h1>
@@ -33,14 +34,19 @@
       <th>Description</th>
     </tr>
     <tr>
-      <td>Temp Name 1</td>
-      <td>Temp Focus 1</td>
-      <td>Temp Descripion 1</td>
+      <td><a href="snake.html">Snake Game</a></td>
+      <td>Javascript development</td>
+      <td>Game where the user controls a snake and is tasked with eating food without crashing.</td>
     </tr>
     <tr>
-      <td>Temp Name 2</td>
-      <td>Temp Focus 2</td>
-      <td>Temp Descripion 2</td>
+      <td><a href="graph.html">Graph</a></td>
+      <td>Javascript development</td>
+      <td>Page showing a bar graph, changing which data is displayed based on user input.</td>
+    </tr>
+    <tr>
+      <td><a href="submitData.html">User Demographic Submission</a></td>
+      <td>Javascript development</td>
+      <td>Form which allows user to submit data to be used for site demographics (currently just downloads data locally).</td>
     </tr>
   </table>
   <p></p>
@@ -48,12 +54,11 @@
   <!-- Code from  https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp on Feb 3 2023, credit to W3 schools!, for unit 3-->
   <!-- Image carousel used to display pictures of projects-->
   <!-- Container for the image gallery -->
-
   <div class="container">
 
     <!-- Full-width images with number text -->
     <!-- Note all images were from Pixabay, attribution is not required-->
-    <div class="mySlides" style="height:40%; width:100%;">
+    <div class="mySlides">
       <div class="numbertext">1 / 4</div>
       <!-- Image by Monoar Rahman Rony from Pixabay https://pixabay.com/photos/laptop-workstation-browsing-tablet-1483974/ -->
       <img src="images/projects/laptop.jpg" style="width:100%" alt="Laptop">
@@ -110,8 +115,10 @@
       </div>
     </div>
   </div>
-  <p>Code for carousel taken and modified from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp and https://www.javascriptfreecode.com/Carousel_Slider.htm (by@phuang).</p>
-  <p> Author: David Carrie. Last Modified: June 5 2023</p>
+
+  <p>Code for carousel taken and modified from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp and
+    https://www.javascriptfreecode.com/Carousel_Slider.htm (by@phuang).</p>
+  <p> Author: David Carrie. Last Modified: June 7 2023</p>
   <!-- Reference to javascript file for carousel taken from: taken from https://www.javascriptfreecode.com/Carousel_Slider.htm on Feb 2 2023, written by @phuang */ -->
   <script src="js/carousel.js"></script>
 </body>

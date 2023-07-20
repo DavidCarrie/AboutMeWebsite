@@ -2,7 +2,7 @@
 
 //Checks if the inputText represents a valid email address
 function ValidateEmail(inputText) {
-    //Storeing the regular expression to check for a valid email in mailformat
+    //Storeing the regular expression to check for a valid email in mainformat
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     //If the regular expression matches the input text, the email is valid

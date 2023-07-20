@@ -1,8 +1,6 @@
 //Note the code in this file is not my own, taken from https://www.javascriptfreecode.com/Carousel_Slider.htm, on Feb 1 2023. Written by @phuang
 
-//This code is used to control a slide carousel with images
-
-//Set initial slide to 1 and call showslides
+//Tihs code is used to control a slide carousel with images
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -16,7 +14,6 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-//Controls which slides to show and hides others
 function showSlides(n) {
     
     let i;
