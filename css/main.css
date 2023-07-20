@@ -33,9 +33,9 @@ h2 {
 
 h1 {
   text-shadow:
-    -1px 0px  black,
+    -1px 0px black,
     1px 0px black,
-    0px -1px  black,
+    0px -1px black,
     0px 1px black;
   color: rgb(255, 255, 255);
   text-align: left;
@@ -46,7 +46,9 @@ p {
   font-family: sans-serif;
   font-size: 20px;
 }
-body > div.linkedIn > p > a
+
+body>div.linkedIn>p>a
+
 /*links on hover*/
 a:hover {
   font-family: monospace;
@@ -54,14 +56,14 @@ a:hover {
 }
 
 /*Linkedin Link Specific, inspired from https://codepen.io/team/css-tricks/pen/xxPORam by Freee Frontend*/
-.linkedIn > * > a{
-	text-decoration: none;
-	color: darkblue;
-	font-weight: 700;
+.linkedIn>*>a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 700;
   position: relative;
 }
 
-.linkedIn > * > a::before{
+.linkedIn>*>a::before {
   content: '';
   background-color: cyan;
   position: absolute;
@@ -72,10 +74,12 @@ a:hover {
   z-index: -1;
   transition: all .2s ease-in-out;
 }
-.linkedIn > * > a:hover::before{
+
+.linkedIn>*>a:hover::before {
   bottom: 0;
   height: 100%;
 }
+
 /*Table Specific Styling*/
 table {
   border: 1px solid;
@@ -85,15 +89,21 @@ table {
 th {
   border: 1px solid;
   text-align: center;
-  background-color:#bbb;
+  background-color: #bbb;
 }
 
 td {
   border: 1px solid;
 }
+
 /* taken from https://www.w3.org/Style/Examples/007/evenodd */
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
+tr:nth-child(even) {
+  background: #CCC
+}
+
+tr:nth-child(odd) {
+  background: #FFF
+}
 
 tr:not(:first-child):hover {
   background-color: grey;
@@ -108,21 +118,21 @@ tr:not(:first-child):hover {
   width: 100%;
 }
 
-.navbar > h1 {
+.navbar>h1 {
   font-size: 3vh;
   padding-left: 3vw;
 }
 
-.navbar > div {
+.navbar>div {
   flex-grow: 1;
 }
 
-.navbar * > h1 {
+.navbar *>h1 {
   font-size: 3vh;
   padding-left: 3vw;
   align-items: center;
-  justify-content: center; 
-  text-align:center;
+  justify-content: center;
+  text-align: center;
 }
 
 .mainNav {
@@ -157,11 +167,12 @@ tr:not(:first-child):hover {
 .mainNav .active {
   background-color: #2e04aa;
 }
+
 /*End of Top navigation bar styling */
 
 
 /*Form input styling taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim and modified for my use*/
-input[type=text]{
+input[type=text] {
   width: 31vw;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -171,9 +182,11 @@ input[type=text]{
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
 }
-input[type=text]:focus{
-  width:50vw;
+
+input[type=text]:focus {
+  width: 50vw;
 }
+
 /*Form Button styling*/
 /*Taken from https://www.w3schools.com/css/css_form.asp and modified for my use */
 input[type=submit],
@@ -182,7 +195,142 @@ input[type=reset] {
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  width:15vw;
+  width: 15vw;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  /* remove extra space below image */
+}
+
+.mySlides {
+  width: 100%;
+  object-fit: fill;
+}
+
+/*Carousel taken from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp on Feb 1 2023, credit to W3 schools! used for Unit 4 */
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  width: 50%;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*End of Carousel code from w3 */
+
+/*Start of code from https://www.w3resource.com/javascript/form/email-validation.php, written by w3 resource and modified. Taken on February 6 2023, used for unit 4*/
+.mail {
+  /*margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 400px;
+  background : 
+  #D8F1F8;*/
+  border: 1px soild silver;
+}
+
+/*
+  input {
+  font-size: 20pt;
+  }
+  */
+input:focus,
+textarea:focus {
+  background-color:
+    lightyellow;
+}
+
+input submit {
+  font-size: 12pt;
+}
+
+.rq {
+  color:
+    #FF0000;
+  font-size: 10pt;
 }
