@@ -1,5 +1,10 @@
 /*General document styling */
 
+.play,
+.stop{
+  width: fit-content !important;
+}
+
 /*include padding and border in total size*/
 html {
   box-sizing: border-box;
@@ -47,8 +52,6 @@ p {
   font-size: 20px;
 }
 
-body>div.linkedIn>p>a
-
 /*links on hover*/
 a:hover {
   font-family: monospace;
@@ -83,7 +86,7 @@ a:hover {
 /*Table Specific Styling*/
 table {
   border: 1px solid;
-  width: 50%
+  width: 70%
 }
 
 th {
@@ -172,7 +175,8 @@ tr:not(:first-child):hover {
 
 
 /*Form input styling taken from https://www.w3schools.com/css/tryit.asp?filename=trycss_form_search_anim and modified for my use*/
-input[type=text] {
+/*input[type=text] {
+  display: block;
   width: 31vw;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -181,11 +185,34 @@ input[type=text] {
   background-color: white;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
+  margin: auto;
 }
 
-input[type=text]:focus {
-  width: 50vw;
+
+*/
+
+input,
+textarea{
+    display: block;
+    width: 31vw;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    
 }
+
+
+input:focus,
+textarea:focus {
+    width: 50vw;
+    background-color:
+        lightyellow;
+}
+
 
 /*Form Button styling*/
 /*Taken from https://www.w3schools.com/css/css_form.asp and modified for my use */
@@ -193,24 +220,44 @@ input[type=submit],
 input[type=reset] {
   background-color: #2304aa;
   color: white;
-  padding: 16px 32px;
-  text-decoration: none;
+  padding: 16px 0px;
   width: 15vw;
   margin: 4px 2px;
   cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+#comments{
+  max-width: 100%;
+  max-height: 20%
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   display: block;
-  /* remove extra space below image */
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .mySlides {
   width: 100%;
   object-fit: fill;
 }
+
+#form-flex{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+fieldset > p{
+  color: grey;
+  font-size: 0.8em;
+}
+
 
 /*Carousel taken from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp on Feb 1 2023, credit to W3 schools! used for Unit 4 */
 * {
@@ -305,29 +352,11 @@ img {
 
 /*Start of code from https://www.w3resource.com/javascript/form/email-validation.php, written by w3 resource and modified. Taken on February 6 2023, used for unit 4*/
 .mail {
-  /*margin: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 400px;
-  background : 
-  #D8F1F8;*/
   border: 1px soild silver;
 }
 
-/*
-  input {
-  font-size: 20pt;
-  }
-  */
-input:focus,
-textarea:focus {
-  background-color:
-    lightyellow;
-}
 
-input submit {
-  font-size: 12pt;
-}
+
 
 .rq {
   color:
@@ -343,12 +372,13 @@ canvas {
 }
 
 /*Code for button*/
+ /*position:absolute;
+    left: 550px;
+    margin-top: 25px;*/
+    
 button {
   background: blue;
   color: white;
-  /*position:absolute;
-    left: 550px;
-    margin-top: 25px;*/
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -360,6 +390,7 @@ button {
   border: 2px solid black;
 }
 
+
 /*For centering Items*/
 .center {
   margin: auto;
@@ -369,13 +400,49 @@ button {
   text-align: center;
 }
 
-.button1 {
+.button {
   background-color: blue;
   color: white;
   white-space: nowrap;
-  border: 3px solid blue;
 }
 
-input[type=text]{
-  margin:auto;
+#field {
+  margin-left: .5em;
+  float: left
+}
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
+}
+
+input.error {
+  border: 1px solid red
+}
+input[type=submit]{
+  text-align: center;
+}
+
+label.error {
+  background: url(images/unchecked.gif) no-repeat;
+  padding-left: 16px;
+  margin-left: .3em
+}
+
+label.valid {
+  background: url(images/checked.gif) no-repeat;
+  display: block;
+  width: 16px;
+  height: 16px
+}
+
+.left {
+  float: left;
+}
+
+.star {
+  margin: auto;
+  width: 30vw;
+  text-align: center;
 }

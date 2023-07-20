@@ -46,29 +46,19 @@
     </h3>
 
     <div class="newsletterSignup">
-        <p>Sign up for our<span> newsletter.</span></p>
+        <h2>Sign up for our<span> newsletter.</span></h2>
+        <p>Email validation on Send</p>
         <form name="form" action="mailto:david.carrie@gmail.com" method="post" enctype="text/plain">
             Name:<br>
             <input type="text" name="name"><br>
             E-mail:<br>
             <input type="text" name="mail"><br>
-            <input type="submit" name="submit" value="Send">
+            <input type="submit" name="submit" value="Send" onclick="ValidateEmail(document.form.mail)">
             <input type="reset" value="Reset">
         </form>
     </div>
-    <!-- Code taken from https://www.w3resource.com/javascript/form/email-validation.php, written by w3resouce. Taken on Feb 6 2023 for email validation in unit 4-->
-    <!-- Form to check if email is valid-->
-    <div class="mail">
-        <h2>Email validation</h2>
-        <form name="form1" action="#">
-            <ul>
-                <li><input type='text' name='text1' /></li>
-                <li>&nbsp;</li>
-                <li class="submit"><input type="submit" name="submit" value="Submit"
-                        onclick="ValidateEmail(document.form1.text1)" /></li>
-                <li>&nbsp;</li>
-            </ul>
-        </form>
+    <!-- Code taken from https://www.w3resource.com/javascript/form/email-validation.php, written by w3resouce. Taken on Feb 6 2023 for email validation in unit 4, -->
+    <!-- Form to check if email is valid-->     
     </div>
     <script src="js/validateEmail.js"></script>
     <!--End of code for email validation-->
@@ -76,7 +66,7 @@
 
     <p>Code for email validation taken and modified from https://www.w3resource.com/javascript/form/email-validation.php
         written by w3resouce.</p>
-    <p> Author: David Carrie. Last Modified: June 7 2023</p>
+    <p> Author: David Carrie. Last Modified: June 17 2023</p>
 
 </body>
 

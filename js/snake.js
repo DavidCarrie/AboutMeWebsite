@@ -162,7 +162,7 @@ class GameBoard {
     }
 
     //update game food and get food location(s)
-    #updateFood() {
+    #updateFood() {    
         //Spawns food if required 
         this.#food.spawnFood();
         //Retrieve food location
@@ -221,7 +221,7 @@ class GameBoard {
         //Loop to generate visual representation of game peices
         for (var x = 0; x < this.#boardSize; x++) {
             for (var y = 0; y < this.#boardSize; y++) {
-
+                
                 if (this.#board[x][y] == 1) {
                     //If snake piece, paint black
                     ctx.fillStyle = "black";
@@ -307,9 +307,19 @@ var gameBoard = new GameBoard();
 document.addEventListener('keydown', gameBoard.userControls);
 
 //Create and add start button to start a new game
+
+
 var button = document.createElement("button");
 button.innerHTML = "Start";
+button.setAttribute("id", "startButton")
+/*
+var buttonPlacement = document.getElementById("star");
+buttonPlacement.appendChild(button);
+
 var docBody = document.getElementsByTagName("body")[0];
+*/
+
+var docBody = document.getElementById("snakeControls");
 docBody.appendChild(button);
 button.addEventListener("click", gameBoard.start);
 
@@ -340,6 +350,6 @@ function draw() {
     //Draw GameState if game active
     if (gameActive) {
         gameBoard.updateDisplay(ctx, canvas.width, cHeight);
-    }
+    } 
     gameBoard.drawScore(ctx, cHeight);
 }

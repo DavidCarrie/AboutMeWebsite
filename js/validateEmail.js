@@ -9,6 +9,7 @@ function ValidateEmail(inputText) {
     if (inputText.value.match(mailformat)) {
         alert("Valid email address!");
         document.form1.text1.focus();
+        //window.open("mailto:david.carrie@gmail.com");
         return true;
     }
     else {

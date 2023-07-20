@@ -6,7 +6,10 @@
   <meta name="description" content="Personal Website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="David Carrie">
-  <link rel="stylesheet" type="text/css" href="css\main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <title>Project List</title>
 </head>
 
@@ -32,95 +35,152 @@
       <th>Project Name</th>
       <th>Area(s) of Focus</th>
       <th>Description</th>
+      <th style="width:5vw">Star Rating</th>
     </tr>
     <tr>
       <td><a href="snake.html">Snake Game</a></td>
       <td>Javascript development</td>
       <td>Game where the user controls a snake and is tasked with eating food without crashing.</td>
+      <td class="star"><i class="fa fa-star p1" aria-hidden="true" id="p1-1"></i>
+        <i class="fa fa-star p1" aria-hidden="true" id="p1-2"></i>
+        <i class="fa fa-star p1" aria-hidden="true" id="p1-3"></i>
+        <i class="fa fa-star p1" aria-hidden="true" id="p1-4"></i>
+        <i class="fa fa-star p1" aria-hidden="true" id="p1-5"></i>
+      </td>
     </tr>
     <tr>
       <td><a href="graph.html">Graph</a></td>
       <td>Javascript development</td>
       <td>Page showing a bar graph, changing which data is displayed based on user input.</td>
+      <td class="star"><i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-1"></i>
+        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-2"></i>
+        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-3"></i>
+        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-4"></i>
+        <i class="fa fa-star p2" class="starChecked" aria-hidden="true" id="p2-5"></i>
+      </td>
     </tr>
     <tr>
       <td><a href="submitData.html">User Demographic Submission</a></td>
       <td>Javascript development</td>
-      <td>Form which allows user to submit data to be used for site demographics (currently just downloads data locally).</td>
+      <td>Form which allows user to submit data to be used for site demographics (currently just downloads data
+        locally).</td>
+      <td class="star"><i class="fa fa-star p3" aria-hidden="true" id="p3-1"></i>
+        <i class="fa fa-star p3" aria-hidden="true" id="p3-2"></i>
+        <i class="fa fa-star p3" aria-hidden="true" id="p3-3"></i>
+        <i class="fa fa-star p3" aria-hidden="true" id="p3-4"></i>
+        <i class="fa fa-star p3" aria-hidden="true" id="p3-5"></i>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="graph.html">Style Switcher</a></td>
+      <td>Javascript development</td>
+      <td>Allows the user to change the css style of the page using a link.</td>
+      <td class="star"><i class="fa fa-star p4" aria-hidden="true" id="p4-1"></i>
+        <i class="fa fa-star p4" aria-hidden="true" id="p4-2"></i>
+        <i class="fa fa-star p4" aria-hidden="true" id="p4-3"></i>
+        <i class="fa fa-star p4" aria-hidden="true" id="p4-4"></i>
+        <i class="fa fa-star p4" aria-hidden="true" id="p4-5"></i>
+      </td>
+    </tr>
+    <td><a href="colorPicker.html">Color Picker</a></td>
+    <td>Javascript development</td>
+    <td>Allows the user to change the background color or navigation menu color using sliders and the buttons provided.
+    </td>
+    <td class="star"><i class="fa fa-star p5" aria-hidden="true" id="p5-1"></i>
+      <i class="fa fa-star p5" aria-hidden="true" id="p5-2"></i>
+      <i class="fa fa-star p5" aria-hidden="true" id="p5-3"></i>
+      <i class="fa fa-star p5" aria-hidden="true" id="p5-4"></i>
+      <i class="fa fa-star p5" aria-hidden="true" id="p5-5"></i>
+    </td>
     </tr>
   </table>
   <p></p>
 
-  <!-- Code from  https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp on Feb 3 2023, credit to W3 schools!, for unit 3-->
-  <!-- Image carousel used to display pictures of projects-->
-  <!-- Container for the image gallery -->
-  <div class="container">
 
-    <!-- Full-width images with number text -->
-    <!-- Note all images were from Pixabay, attribution is not required-->
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <!-- Image by Monoar Rahman Rony from Pixabay https://pixabay.com/photos/laptop-workstation-browsing-tablet-1483974/ -->
-      <img src="images/projects/laptop.jpg" style="width:100%" alt="Laptop">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <!-- Image by Alexander Fox | PaNet Fox from Pixabay https://pixabay.com/photos/raspberry-pi-pi-computer-4980917/ -->
-      <img src="images/projects/raspberry-pi.jpg" style="width:100%" alt="Raspberry Pi">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <!-- Image by Thor_Deichmann from Pixabay https://pixabay.com/illustrations/speaker-wireless-internet-iot-2371550/ -->
-      <img src="images/projects/speaker.jpg" style="width:100%" alt="Speaker">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <!-- Image by denispixels from Pixabay https://pixabay.com/photos/sensor-electronics-cables-6848526/ -->
-      <img src="images/projects/sensor.jpg" style="width:100%" alt="Sensor">
-    </div>
-
-
-
-
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Image text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/projects/laptop.jpg" style="width:100%" onclick="currentSlide(1)"
-          alt="Laptop">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/projects/raspberry-pi.jpg" style="width:100%" onclick="currentSlide(2)"
-          alt="Raspberry Pi">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/projects/speaker.jpg" style="width:100%" onclick="currentSlide(3)"
-          alt="Speaker">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/projects/sensor.jpg" style="width:100%" onclick="currentSlide(4)"
-          alt="Sensor">
-      </div>
-    </div>
+  <div class="owl-carousel center">
+    <div> <img src="images/projects/laptop.jpg" style="width:50%" alt="Laptop"></div>
+    <div> <img src="images/projects/raspberry-pi.jpg" style="width:50%" alt="Raspberry Pi"> </div>
+    <div><img src="images/projects/speaker.jpg" style="width:50%" alt="Speaker"></div>
+    <div> <img src="images/projects/sensor.jpg" style="width:50%" alt="Sensor"> </div>
   </div>
-
-  <p>Code for carousel taken and modified from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp and
-    https://www.javascriptfreecode.com/Carousel_Slider.htm (by@phuang).</p>
-  <p> Author: David Carrie. Last Modified: June 7 2023</p>
+  <button class="button play">Start Slide Auto Scroll</button>
+  <button class="button stop">Stop Slide Auto Scroll</button>
+  <p> Author: David Carrie. Last Modified: June 12 2023</p>
+  <script src="js/jquery.js"></script>
   <!-- Reference to javascript file for carousel taken from: taken from https://www.javascriptfreecode.com/Carousel_Slider.htm on Feb 2 2023, written by @phuang */ -->
-  <script src="js/carousel.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      //Call owl carousel for new carousel
+
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        nav: true,
+        navigationText: ["Next", "Prev"],
+        dots: false,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        autoHeight: true,
+        items: 1
+      });
+
+      $("body > button:nth-child(8)").click(function () {
+        console.log("start button clicked.")
+        owl.trigger('play.owl.autoplay', [2000])
+      });
+      $("body > button:nth-child(9)").click(function () {
+        console.log("stop button clicked.")
+        owl.trigger('stop.owl.autoplay')
+      });
+
+      //create array to iterate over to generate click functions
+      var projects = new Array()
+      for (i = 0; i < 5; i++) {
+        projects[i] = i + 1;
+      }
+
+      //Loop to create on click functions for star ratings
+      $.each(projects, function (i, v) {
+        var starClass = ".p" + v;
+        var starIdPref = "#p" + v;
+
+        $(starIdPref + "-1").click(function () {
+          $(starClass).css("color", "black");
+          $(starIdPref + "-1").css("color", "yellow");
+        });
+
+        $(starIdPref + "-2").click(function () {
+          $(starClass).css("color", "black");
+          $(starIdPref + "-1" + ", " + starIdPref + "-2").css("color", "yellow");
+        });
+
+        $(starIdPref + "-3").click(function () {
+          $(starClass).css("color", "black")
+          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3").css("color", "yellow");
+        });
+
+        $(starIdPref + "-4").click(function () {
+          $(starClass).css("color", "black");
+          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3" + ", " + starIdPref + "-4").css("color", "yellow");
+        });
+
+        $(starIdPref + "-5").click(function () {
+          $(starClass).css("color", "black");
+          $(starIdPref + "-1" + ", " + starIdPref + "-2" + ", " + starIdPref + "-3" + ", " + starIdPref + "-4" + ", " + starIdPref + "-5").css("color", "yellow");
+
+
+        });
+      });
+
+    });
+
+  </script>
+
 </body>
+<footer>
+  <script src="js/owl.carousel.min.js"></script>
+</footer>
 
 </html>

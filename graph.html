@@ -9,7 +9,9 @@
   <meta name="description" content="Personal Website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="David Carrie">
-  <link rel="stylesheet" type="text/css" href="css\main.css">
+  <link rel="stylesheet" id="default-them" type="text/css" href="css/main.css">
+  <link type="text/css" rel="stylesheet" id="jssDefault" href="css/theme1.css" />
+
   <title>Demographic Graph</title>
 
 
@@ -35,11 +37,26 @@
   <button class="button button1" onclick="userControls();">Change Chart</button>
   <div class="center">
     <p>Upload Data - (Contact me for file format):</p>
-    <input type="file" id="fileInput" accept=".txt" />
+    <input type="file" class="button button1" id="fileInput" accept=".txt" />
   </div>
+  <fieldset>
+    <legend>Style Switcher</legend>
+    <ul id="styleOptions" title="switch styling">
+      <li><a href="#" rel="css/main.css">Default Theme</a> </li>
+      <li><a href="#" rel="css/theme2.css">Theme B</a> </li>
+    </ul>
+  </fieldset>
 
   <script src="js/graph.js"></script>
-
+  <script src="js/jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#styleOptions > li > a").click(function () {
+        $("link").attr("href", $(this).attr("rel"));
+      })
+    });
+  </script>
+  <p> Author: David Carrie. Last Modified: June 17 2023</p>
 </body>
 
 </html>
